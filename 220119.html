@@ -98,5 +98,34 @@
             </tr>
         </tbody>
     </table>
+    <form>
+        <fieldset>
+            <legend>선수 투표</legend>
+            <p><b>투표하실 선수 이름을 입력해 주세요.</b></p>
+            <ul>
+                <li>
+                    <label><input type="checkbox" value="goalkeeper">골키퍼</label>
+                    <input type="text">선수
+                </li>
+                <li>
+                    <label><input type="checkbox" value="defender">수비수</label>
+                    <input type="text">선수
+                </li>
+                <li>
+                    <label><input type="checkbox" value="midfielder">미드필더</label>
+                    <input type="text">선수
+                </li>
+                <li>
+                    <label><input type="checkbox" value="striker">공격수</label>
+                    <input type="text">선수
+                </li>
+            </ul>
+            <p><b>공개 여부 선택</b></p>
+            <ul>
+            <li><label><input type="radio" name="open" value="yes"></label>공개</li>
+            <li><label><input type="radio" name="open" value="no"></label>비공개</li>
+            </ul>
+        </fieldset>
+    </form>
 </body>
 </html>
