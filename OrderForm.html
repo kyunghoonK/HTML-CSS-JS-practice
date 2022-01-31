@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>후드티 주문하기</title>
+</head>
+<body>
+    <h1>후드티 주문 양식</h1>
+    <form>
+        <fieldset>
+            <legend>상품 선택</legend>
+            <p><b>주문할 상품을 선택해 주세요</b></p>
+            <ul>
+                <li>
+                    <label><input type="checkbox" value="design_1">1번 디자인</label>
+                    <input type="number" min="0" max="3">개 (최대 3개)
+                </li>
+                <li>
+                    <label><input type="checkbox" value="design_2">2번 디자인</label>
+                    <input type="number" min="0" max="3">개 (최대 3개)
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <label><input type="checkbox" value="number_1">1번 사이즈</label>
+                    <input type="range" min="0" max="4">(S M L XL XXL)
+                </li>
+                <li>
+                    <label><input type="checkbox" value="number_2">2번 사이즈</label>
+                    <input type="range" min="0" max="4">(S M L XL XXL)
+                </li>
+            </ul>
+            <p><b>포장 선택</b></p>
+            <ul>
+                <li>
+                    <label><input type="radio" name="gift" value="yes">선물 포장</label>
+                    <label><input type="radio" name="gift" value="no">선물 포장 안함</label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <label><input type="radio" name="payment" value="card">신용 카드</label>
+                    <label><input type="radio" name="payment" value="make a deposit">무통장 입금</label>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
