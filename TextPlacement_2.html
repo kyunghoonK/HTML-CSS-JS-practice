@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 위치속성</title>
+    <style>
+        *{
+            margin:0; /* 마진 초기화 */
+            padding:0; /* 패딩 초기화 */
+        }
+        p{
+            width:300px; /* 너비 - 300px */
+            border:1px solid #ccc;
+            padding:10px;
+        }
+        #pos1{
+            position:absolute;
+            left:50px;
+            top:50px;
+        }
+        #pos2{
+            position:absolute;
+            right:100px;
+            top:100px;
+        }
+        #pos3{
+            position:absolute;
+            right:100px;
+            bottom:100px;
+        }
+    </style>
+</head>
+<body>
+    <p id="pos1">가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하</p>
+    <p id="pos2"> I like a apple. Hi my name is xxxxx</p>
+    <p id="pos3"> 나는 오늘 사과를 먹었다. 나는 오늘 수박을 구매했다. 수박의 가격은 여름 과일이다.</p>
+</body>
+</html>
