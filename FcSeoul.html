@@ -21,22 +21,146 @@
         a { text-decoration: none;}
 
         .container {
-            width: 1000px;
+            width: 1200px;
             margin: auto;
+            text-align: center;
         }
 
         h1 {
-            color: #af030f;
+            color: white;
             font-size: 60px;
             font-weight: bold;
             font-family: 'Akshar', sans-serif;
+            margin: 3px 150px;
         }
+
+        /* Navigation Styles */
+
+        nav { background: #af030f; }
+
+        nav ul {
+            font-size: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            display: block;
+            font-size: 30px;
+            padding: 10px 40px;
+            transition: 0.3s linear;
+        }
+
+        nav ul li ul {
+            border-bottom: 5px solid #2ba0db;
+            display: none;
+            position: absolute;
+            width: 150px;
+            text-align:center;
+        }
+
+        nav ul li ul li {
+            border-top: 1px solid #444;
+            display: block;
+            text-align:center
+        }
+
+        nav ul li ul li:first-child { 
+            border-top: none;
+            text-align: center;
+        }
+
+        nav ul li ul li a {
+            background: #373737;
+            font-size: 25px;
+            display: block;
+            padding: 10px 14px;
+        }
+
+        nav ul li ul li a:hover { 
+            background: #126d9b;
+            text-align: center;
+        }
+
+        nav .fa.fa-angle-down { margin-left: 6px; }
+
+        a[target = _blank] {
+            background-image: url(images_p/icons8-shop-50.png);
+            background-size: 35px 35px;
+            background-repeat: no-repeat;
+            background-position: left;
+            padding-left: 40px;
+        }
+
     </style>
 </head>
 <body>
     <h1>
-        <img src="images_p/FcSeoul_Logo.png" alt="FC SEOUL">
-        FC SEOUL
+        <img src="https://www.fcseoul.com/resources/front/images/common/img_logo.png" alt="FC SEOUL">
     </h1>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="https://www.fcseoul.com/fcshop" target="_blank">SHOP</a></li>
+                <li><a href="#">MEDIA<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">NOTICE</a></li>
+                        <li><a href="#">PHOTO</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MATCHES<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="#">일정/결과</a></li>
+                        <li><a href="#">기록/순위</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">TICKETS<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="#">티켓 예매</a></li>
+                        <li><a href="#">단체 입장권</a></li>
+                        <li><a href="#">몬테스 알파 스카이 박스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MEMBERSHIP<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="#">2022 PLUS 멤버십</a></li>
+                        <li><a href="#">멤버십(GS&POINT) 카드</a></li>
+                        <li><a href="#">멤버십(GS&POINT) 카드 안내</a></li>
+                        <li><a href="#">제휴 카드 안내</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CLUB<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="#">선수단 소개</a></li>
+                        <li><a href="#">유스팀 소개</a></li>
+                        <li><a href="#">구단 소개</a></li>
+                        <li><a href="#">스폰서</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FANZONE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $('nav li').hover(
+            function() {
+                $('ul', this).stop().slideDown(200);
+            },
+            function() {
+                $('ul', this).stop().slideUp(200);
+            }
+        )
+    </script>
+
 </body>
 </html>
