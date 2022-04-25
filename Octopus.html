@@ -14,17 +14,51 @@
                 </h1>
             </div>
             <nav>
+                <div class="container">
                 <ul id="topMenu">
-                    <li><a href="#">(신문)SUBSCRIPTION</a></li>
+                    <li><a href="#">학교<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="#">가나다</a></li>
+                    <li><a href="#">라마바</a></li>
+                </ul>
                     <li><a href="#">(집)HOME</a></li>
                     <li><a href="#">MESSAGE</a></li>
                 </ul>
+                </div>
             </nav>
         </header> <!--헤더 영역 종료 지점-->
 
-        <main> <!--메인 영역 시작 지점-->
+<!-- ----------------------------------------------------------------------------- -->
 
+        <main class="contents"> <!--메인 영역 시작 지점-->
+            <section id="section-1">
+                <h2>나의 라임 오렌지 나무</h2>
+                <div class="detail-1">
+                    <img src="images_p/testscreen.jpg">
+                    <b><p>웹서비스 테스트 중인 화면 입니다.</p></b>
+                    <p> 테스트 화면 입니다.</p>
+                </div>
+
+                <div class="schedule">
+                    <h3>나는 오늘 사과를 먹었다.</h3>
+                    <ul>
+                        <li>바나나를 먹었다.</li>
+                        <li>오렌지를 먹었다.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="section-2">
+                <h2>다양한 액티비티가 기다리는 섬</h2>
+                <div class="detail-2">
+                    <img src="images_p/testscreen.jpg">
+                    <b><p>모험과 스릴이 넘치는 섬으로 안내합니다.</p></b>
+                    <p>하늘을 날며 시원을 바다를 보세요.</p>
+                </div>
+            </section>
         </main> <!--메인 영역 종료 지점-->
+
+<!-- ----------------------------------------------------------------------------- -->
 
         <footer> <!--푸터 영역 시작 지점-->
             <section id="bottomMenu">
@@ -37,5 +71,16 @@
             </section>
         </footer> <!--푸터 영역 종료 지점-->
     </div>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $('nav li').hover(
+            function() {
+                $('ul', this).stop().slideDown(200);
+            },
+            function() {
+                $('ul',this).stop().slideUp(200);
+            }
+        )
+    </script>
 </body>
 </html>
