@@ -4,43 +4,99 @@
     <meta charset="UTF-8">
     <title>DropDownMenu</title>
     <style>
-        ul, ol, li { list-style:none; margin:0; padding:0; }
+        /* 여백을 없애줍니다. */
+        * {
+            margin: 0; /*위쪽 여백*/
+            padding: 0; /*왼쪽 여백*/
+        }
 
-        ul.myMenu {}
-        ul.myMenu > li { display:inline-block; width:80px; padding:5px 10px;
-        background:#eee; text-align:center; position:relative; }
-        ul.myMenu > li ul.submenu { display:none; position:absolute; top:30px;
-        left:0; }
-        ul.myMenu > li:hover ul.submenu { display:block; }
+        /* 기본 설정되어 있던 리스트 스타일을 없애줍니다. */
+        ul li{
+            list-style: none;
+        }
 
-        ul.myMenu > li ul.submenu > li { display:inline-block; width:80px; padding:5px 10px; background:#eee; text-align:center; }
-        ul.myMenu > li ul.submenu > li:hover { background: #fff; }
+        /* 텍스트 밑줄 선을 없애고, 글자의 색을 선택합니다. */
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #menu {
+            font: bold 16px;
+            width: 700px;
+            height: 50px;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, navy, purple);
+            color: black;
+            line-height: 50px;
+            margin:0 auto;
+            text-align: center; /*글 가운데 정렬*/
+        }
+
+        #menu > ul > li {
+            float: left; /* 왼쪽부터 좌우 정렬 */
+            width: 140px; /* 사이 간격 */
+            position: relative;
+        }
+
+        #menu > ul > li > ul {
+            width: 120px;
+            display: none;
+            position: absolute;
+            font-size: 14px;
+            background: orange;
+        }
+
+        #menu > ul > li:hover > ul {
+            display: block;
+        }
+
+        #menu > ul > li > ul > li:hover {
+            background: greenyellow;
+        }
+
+
 
     </style>
 </head>
 <body>
-    <div id="container">
-        <ul class="myMenu">
-            <li class="menu1">메뉴 1</li>
-            <li class="menu2">
-                메뉴 2
-                <ul class="menu2_s submenu">
-                    <li>메뉴 2-1</li>
-                    <li>메뉴 2-2</li>
-                    <li>메뉴 3-1</li>
-                </ul>
-            </li>
-            <li class="menu3">
-                메뉴 3
-                <ul class="menu3_s submenu">
-                    <li>메뉴 3-1</li>
-                    <li>메뉴 3-2</li>
-                    <li>메뉴 3-3</li>
-                </ul>
-            </li>
-            <li class="menu4">메뉴 4</li>
-            <li class="menu5">메뉴 5</li>
-        </ul>
-    </div>
+<div id="menu">
+    <ul>
+        <li><a href="#">MENU1</a>
+            <ul>
+                <li><a href="#">MENUE1-1</a></li>
+                <li><a href="#">MENUE1-2</a></li>
+                <li><a href="#">MENUE1-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">MENU2</a>
+            <ul>
+                <li><a href="#">MENUE2-1</a></li>
+                <li><a href="#">MENUE2-2</a></li>
+                <li><a href="#">MENUE2-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">MENU3</a>
+            <ul>
+                <li><a href="#">MENUE3-1</a></li>
+                <li><a href="#">MENUE3-2</a></li>
+                <li><a href="#">MENUE3-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">MENU4</a>
+            <ul>
+                <li><a href="#">MENUE4-1</a></li>
+                <li><a href="#">MENUE4-2</a></li>
+                <li><a href="#">MENUE4-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">MENU5</a>
+            <ul>
+                <li><a href="#">MENUE5-1</a></li>
+                <li><a href="#">MENUE5-2</a></li>
+                <li><a href="#">MENUE5-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
 </body>
 </html>
